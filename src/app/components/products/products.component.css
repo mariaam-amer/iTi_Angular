@@ -1,0 +1,35 @@
+.products-container {
+  padding: 2rem;
+  background-color: #f9f9f9;
+}
+
+.filter-form {
+  margin: 1rem 0;
+}
+
+.filter-form form {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+input, select {
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.current-values {
+  margin-top: 1rem;
+}

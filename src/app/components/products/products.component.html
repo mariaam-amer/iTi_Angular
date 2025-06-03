@@ -1,0 +1,41 @@
+<div class="products-container">
+  <h2>Our Products</h2>
+
+  <div class="filter-form">
+    <label>Product Filter</label>
+    <table>
+      <tr>
+        <td>Category</td>
+        <td>Product Title</td>
+        <td>Max Price ($)</td>
+      </tr>
+      <tr>
+        <td>
+          <select #selectedCategory>
+            <option value="All">All</option>
+            <option>Mobile</option>
+            <option>Laptop</option>
+            <option>Electronics</option>
+          </select>
+        </td>
+        <td>
+          <input type="text" #inputTitle placeholder="Search by title" />
+        </td>
+        <td>
+          <input type="number" #inputPrice placeholder="Enter Max Price" />
+        </td>
+      </tr>
+    </table>
+
+    <button (click)="resultFilter(selectedCategory.value, inputTitle.value, inputPrice.value)">
+      Apply
+    </button>
+  </div>
+
+  <div class="current-values">
+    <h3>Current Filter Values</h3>
+    <p><b>Category:</b> {{ category }}</p>
+    <p><b>Title Search:</b> {{ search }}</p>
+    <p><b>Max Price:</b> {{ price }}</p>
+  </div>
+</div>
