@@ -6,18 +6,21 @@ import { App } from './app';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ProductsComponent } from './components/products/products.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { FormsModule } from '@angular/forms';
+import { provideHttpClient } from '@angular/common/http';
+import { ProductFilterPipe } from './pipes/product-filter-pipe';
 
 
 @NgModule({
   declarations: [
-    App, NavbarComponent, ProductsComponent, FooterComponent 
+    App, NavbarComponent, ProductsComponent, FooterComponent, ProductFilterPipe
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,FormsModule
   ],
   providers: [
-    provideBrowserGlobalErrorListeners()
+    provideBrowserGlobalErrorListeners(),provideHttpClient()
   ],
   bootstrap: [App]
 })
